@@ -3,6 +3,5 @@ const s = "MyNam";
 
 for (let k of student) {
   // display the properties
-  console.log(`${k}`);
+  console.log(`>>>> ${k}`);
 }
-
