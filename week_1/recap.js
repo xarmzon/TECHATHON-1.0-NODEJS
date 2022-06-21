@@ -414,7 +414,16 @@ for (let i of string2) {
 }
 
 /**JAVASCRIPT CLASSES */
-class MyClass {
+const techathon = {
+  track: "Nodejs",
+  version: 1.0,
+  tutor: "Rasta",
+  students: {
+    count: 44,
+    active: 18,
+  },
+};
+class NameOfClass {
   // class methods
   constructor() {}
   method1() {}
@@ -438,7 +447,6 @@ class Person {
   constructor(name) {
     this.name = name;
   }
-
   // defining method
   greet() {
     console.log(`Hello ${this.name}`);
@@ -496,7 +504,7 @@ class Person {
 // inheriting parent class
 class Student extends Person {}
 
-let s1 = new Student("Jack");
+let s1 = new Student("Rasta");
 s1.greet();
 
 // The super keyword used inside a child class denotes its parent class.
@@ -519,7 +527,7 @@ class Student extends Person {
   }
 }
 
-let s2 = new Student("Jack");
+let s2 = new Student("Rasta");
 s2.greet();
 
 //real-example of inheritance
@@ -583,6 +591,9 @@ function callMe() {
 
 // passing function as an argument
 greet("Rasta", callMe);
+greet("Rasta", function () {
+  console.log("This is defined straine");
+});
 
 ///Promise
 // In JavaScript, a promise is a good way to handle asynchronous operations
