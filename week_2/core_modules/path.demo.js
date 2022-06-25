@@ -34,13 +34,6 @@ const path = require("path");
 // console.log(i1);
 // console.log(i2);
 
-//TODO: path.join()
-// Joins two or more parts of a path:
-
-// const name = "rasta";
-// const j = path.join("/", "users", name, "notes.txt");
-// console.log(j);
-
 //TODO: path.parse()
 // Parses a path to an object with the segments that compose it:
 // root: the root
@@ -73,16 +66,25 @@ const path = require("path");
 // });
 // console.log(p);
 
+//TODO: path.join()
+// Joins two or more parts of a path:
+
+// const name = "rasta";
+// const j = path.join("/", "users", name, "notes.txt");
+// console.log(j);
+
 //TODO: path.resolve()
 // You can get the absolute path calculation of a relative path using
 //path.resolve() based on the current directory
 
-// const r1 = path.resolve("techathon.txt");
+// const r1 = path.resolve("user", "xarm", "techathon.txt");
+// const j1 = path.join("user", "xarm", "techathon.txt");
 // console.log(r1);
+// console.log(j1);
 
 // const r2 = path.resolve("tmp", "techathon.txt");
 // console.log(r2);
 
 // If the first parameter starts with a slash, that means it’s an absolute path:
-// const r3 = path.resolve("/etc", "techathon.txt");
+// const r3 = path.resolve("/etc", "xarm", "rast", "techathon.txt");
 // console.log(r3);

@@ -1,25 +1,45 @@
+const { on } = require("events");
 const EventEmitter = require("events");
 const fs = require("fs");
+const { addListener } = require("process");
 
 //todo: Creating EventEmitters
 //This can be done either via creating an instance of the class itself,
 //or by implementing it through a custom class and then creating an instance of that class.
 const door = new EventEmitter();
 
+class Logger extends EventEmitter {
+  constructor() {
+    super();
+    this.name = this.constructor.name;
+  }
+
+  log(msg) {
+    this.emit("log", this.name, msg);
+  }
+}
+const logger = new Logger();
+
 //todo: emitter.on() & emitter.addListener()
 // Adds a callback function that's called when an event is emitted.
+// logger.on("log", (name, msg) => {
+//   console.log(`${name}: ${new Date().toISOString()}---> ${msg}`);
+// });
+
 door.on("open", (by) => {
   console.log(`Master, ${by} Just open me!`);
 });
-// door.on("open", () => {
-//   console.log("Yess, I will work too for open");
-// });
+
+door.on("open", () => {
+  console.log("Yess, I will work too for open");
+});
 door.on("close", (by) => {
   console.log(`Master, ${by} Just close me!`);
 });
 door.on("jam", (by) => {
   console.log(`Master, ${by} Just jammed me and it hurts!`);
 });
+door.on("arrive", () => {});
 
 door.addListener("leave", (house) => {
   console.log(
@@ -28,6 +48,11 @@ door.addListener("leave", (house) => {
     }\n`
   );
 });
+
+on("event");
+addListener("event");
+
+emit("event_name", param1, param2, param3);
 
 door.addListener("locked", (by, message) => {
   console.log(
@@ -38,11 +63,13 @@ door.addListener("locked", (by, message) => {
 ///todo: emitter.emit()
 // Emits an event.
 //It synchronously calls every event listener in the order they were registered.
+// emitter.emit(eventName,param1,parm2,parm3)
 // door.emit("jam", "Rasta");
 // door.emit("jam", "Green");
 // door.emit("leave");
 // door.emit("leave", { address: "Ilorin", no: "2555" });
-// door.emit("locked", "Rasta", "Please come back tomorrow");
+door.emit("locked", "Rasta", "Please come back tomorrow");
+logger.log("This is Techathon NodeJS Track ");
 
 //todo: emitter.eventNames()
 // Return an array of strings that represent the events registered on the current
@@ -118,9 +145,6 @@ door.addListener("locked", (by, message) => {
 //todo: Error Handling
 // If you want to emit an error with your EventEmitter,
 // it must be done with an error event-name.
-// This is standard for all EventEmitter objects in Node.js.
-// This event must also be accompanied by an Error object.
-// For example, an error event can be emitted like this:
 // door.on("error", (e) => {
 //   console.log(e);
 // });
@@ -128,16 +152,16 @@ door.addListener("locked", (by, message) => {
 // door.emit("error", new Error("Haaaaaaaa"));
 
 // todo: Let's take a look at some classic Stream usage
-const writer = fs.createWriteStream("example.txt");
+// const writer = fs.createWriteStream("../files/myStream.txt");
 
-for (let i = 0; i < 1000; i++) {
-  writer.write(`hello, #${i}!\n`);
-}
+// for (let i = 0; i < 100000; i++) {
+//   writer.write(`hello, #${i}!\n`);
+// }
 
-writer.on("finish", () => {
-  console.log("All writes are now complete.");
-});
+// writer.on("finish", () => {
+//   console.log("All writes are now complete.");
+// });
 
-writer.end("This is the end\n");
+// writer.end("This is the end\n");
 
 //todo: Other events, such as error, pipe and unpipe

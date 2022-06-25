@@ -13,13 +13,13 @@ const os = require("os");
 
 //TODO: os.freemem()
 // Return the number of bytes that represent the free memory in the system.
-// const freemem = os.freemem();
-// console.log(freemem);
+const freemem = os.freemem();
+console.log(freemem);
 
 //todo: os.totalmem()
 // Returns the number of bytes that represent the total memory available in the system.
-// const totalmem = os.totalmem();
-// console.log(totalmem);
+const totalmem = os.totalmem();
+console.log(totalmem);
 
 //todo: os.homedir()
 // Return the path to the home directory of the current user.
@@ -51,8 +51,8 @@ const os = require("os");
 //todo: os.uptime()
 // Returns the number of seconds the computer has been running
 //since it was last rebooted
-// const uptime = os.uptime();
-// console.log(uptime);
+const uptime = os.uptime();
+console.log(uptime);
 
 //todo: os.userInfo()
 // Returns information about the current user
