@@ -1,8 +1,8 @@
 # TECHATHON COMMUNITY 1.0 NODEJS TRACK
 
-## WEEK 1 FILES
+## WEEK 2 FILES
 
-Necessary files for week 1 classes
+Necessary files for week 2 classes
 
 ## INSTRUCTOR
 
