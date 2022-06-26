@@ -6,15 +6,15 @@ const path = require("path");
 
 //todo: fs.readFile() & fs.readFileSync
 //  This method is used to read files on your computer.
-// fs.readFile("../files/myScores.txt", (err, data) => {
-//   if (err) throw err;
-//   console.log(data.toString());
-// });
-// fs.readFile("../files/hello.js", (err, data) => {
-//   console.log(err);
-//   //   if (err) throw err;
-//   console.log(data.toString());
-// });
+fs.readFile("../files/myScores.txt", (err, data) => {
+  if (err) throw err;
+  console.log(data.toString());
+});
+fs.readFile("../files/hello.js", (err, data) => {
+  console.log(err);
+  //   if (err) throw err;
+  console.log(data.toString());
+});
 
 // todo: fs.writeFile() fs.writeFileSync
 //This method is used to write files on your computer

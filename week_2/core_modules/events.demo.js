@@ -1,4 +1,3 @@
-const { on } = require("events");
 const EventEmitter = require("events");
 const fs = require("fs");
 const { addListener } = require("process");
@@ -39,7 +38,7 @@ door.on("close", (by) => {
 door.on("jam", (by) => {
   console.log(`Master, ${by} Just jammed me and it hurts!`);
 });
-door.on("arrive", () => {});
+door.on("arrive on time", () => {});
 
 door.addListener("leave", (house) => {
   console.log(
@@ -49,10 +48,7 @@ door.addListener("leave", (house) => {
   );
 });
 
-on("event");
-addListener("event");
-
-emit("event_name", param1, param2, param3);
+// emit("event_name", param1, param2, param3);
 
 door.addListener("locked", (by, message) => {
   console.log(
@@ -66,10 +62,13 @@ door.addListener("locked", (by, message) => {
 // emitter.emit(eventName,param1,parm2,parm3)
 // door.emit("jam", "Rasta");
 // door.emit("jam", "Green");
+// door.emit("jam", "Kabir");
+// door.emit("jam", "Tosin");
+// door.emit("jam", "Ezekiel");
 // door.emit("leave");
 // door.emit("leave", { address: "Ilorin", no: "2555" });
-door.emit("locked", "Rasta", "Please come back tomorrow");
-logger.log("This is Techathon NodeJS Track ");
+// door.emit("locked", "Rasta", "Please come back tomorrow");
+// logger.log("This is Techathon NodeJS Track ");
 
 //todo: emitter.eventNames()
 // Return an array of strings that represent the events registered on the current
@@ -85,7 +84,7 @@ logger.log("This is Techathon NodeJS Track ");
 
 //todo: emitter.listenerCount()
 // Get the count of listeners of the event passed as parameter:
-// const oCount = door.listenerCount("open");
+// const oCount = door.listenerCount("close");
 // console.log(oCount);
 
 //todo: emitter.listeners()
@@ -100,13 +99,14 @@ logger.log("This is Techathon NodeJS Track ");
 // const doSomething = () => {};
 // door.on('open', doSomething);
 // door.removeListener('open', doSomething);
+// door.emit("open")
 
 //todo: emitter.once()
 //Adds a callback function that's called when an event is emitted for the first time.
 //This callback is only going to be called once, never again.
-// door.once("force jam", () => {
-//   console.log("Jammed for life");
-// });
+door.once("force jam", () => {
+  console.log("Jammed for life");
+});
 
 // door.emit("force jam");
 // door.emit("force jam");
@@ -158,6 +158,7 @@ logger.log("This is Techathon NodeJS Track ");
 //   writer.write(`hello, #${i}!\n`);
 // }
 
+// writer.on("error")
 // writer.on("finish", () => {
 //   console.log("All writes are now complete.");
 // });
