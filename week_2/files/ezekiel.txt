@@ -1,3 +1,0 @@
-Name        Community       Track
-ezekiel     Techathon       Nodejs
-ezekiel     Techathon       Nodejs
