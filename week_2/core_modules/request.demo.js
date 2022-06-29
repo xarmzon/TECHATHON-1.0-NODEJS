@@ -52,10 +52,12 @@ const req = http.request(options, (res) => {
   res.setEncoding("utf-8");
   res.on("data", (chunk) => {
     data += chunk;
+    console.log(chunk);
   });
   res.on("end", () => {
     console.log(`\n---------Data Start-------------\n`);
-    console.log(data);
+    const parsedData = JSON.parse(data);
+    console.log(parsedData.name);
     console.log(`\n---------Data End---------------\n\n`);
   });
 });
