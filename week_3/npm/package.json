@@ -1,0 +1,19 @@
+{
+  "name": "notesmanager",
+  "version": "1.0.0",
+  "description": "This is an api for managing notes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "rm file.js && node index.js",
+    "prod": "node prod"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "qs": "^6.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
