@@ -1,0 +1,18 @@
+[
+  {
+    "name": "RastaXarm",
+    "track": "ReactJS",
+    "gender": "Male",
+    "id": 1,
+    "createdAt": "2022-07-02T20:58:42.754Z",
+    "updatedAt": "2022-07-03T19:01:22.304Z"
+  },
+  {
+    "name": "Dorathy",
+    "track": "NodeJS",
+    "gender": "Female",
+    "id": 4,
+    "createdAt": "2022-07-03T19:03:48.536Z",
+    "updatedAt": "2022-07-03T19:04:56.447Z"
+  }
+]
