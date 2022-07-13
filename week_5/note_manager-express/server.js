@@ -19,11 +19,9 @@ app.get("/notes", async (req, res) => {
     if (name) {
       const userNotes = notes[name];
       if (!userNotes) {
-        res
-          .status(404)
-          .json({
-            msg: "Sorry, no notes for the supplied user name. Please try again with a valid name",
-          });
+        res.status(404).json({
+          msg: "Sorry, no notes for the supplied user name. Please try again with a valid name",
+        });
         return;
       }
       notes = userNotes;
@@ -151,6 +149,10 @@ app.delete("/notes/:name/:id", async (req, res) => {
       error: error.message,
     });
   }
+});
+
+app.get("/users", (req, res) => {
+  res.status(200).json({ ip: req.ip, ips: req.ips });
 });
 
 app.listen(PORT, () => {
