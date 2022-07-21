@@ -69,7 +69,7 @@ app.use((err, req, res, next) => {
 const start = async () => {
   await connect("mongodb://localhost:27017/db_name");
   app.listen(PORT, () => {
-    console.log(`Server running....`);
+    console.log(`Server running.....`);
   });
 };
 
