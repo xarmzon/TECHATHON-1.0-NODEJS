@@ -1,0 +1,24 @@
+[
+  {
+    "_id": "d8fd4069-3e3d-4481-8af0-107d326853c9",
+    "colName": "RentMoney",
+    "created": "2022-07-26T17:31:39.917Z",
+    "sortNum": 10000,
+    "folders": [
+      {
+        "_id": "dfc73535-778d-4ff1-8d4b-8cb20553e8d3",
+        "name": "Accounts",
+        "containerId": "",
+        "created": "2022-07-26T17:32:06.828Z",
+        "sortNum": 10000
+      },
+      {
+        "_id": "4bbc761d-8398-4c5f-91c6-ac6510407bcb",
+        "name": "Ledgers",
+        "containerId": "",
+        "created": "2022-07-26T17:32:44.191Z",
+        "sortNum": 20000
+      }
+    ]
+  }
+]
