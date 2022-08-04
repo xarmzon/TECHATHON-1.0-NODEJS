@@ -1,0 +1,73 @@
+[
+  {
+    "_id": "01c3a389-6493-4a4a-bb48-915c70480ef5",
+    "colId": "8146a879-4947-4b79-b063-79a8478df42d",
+    "containerId": "4e31f788-2d41-4755-9564-2393f5d92149",
+    "name": "Register",
+    "url": "localhost:8000/auth/register",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2022-08-03T18:48:03.397Z",
+    "modified": "2022-08-03T19:41:59.317Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"username\": \"rasta\",\n  \"password\": \"mypassword\",\n  \"role\": \"seller\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "26501083-e05c-470f-8ccb-b6608c58092c",
+    "colId": "8146a879-4947-4b79-b063-79a8478df42d",
+    "containerId": "4e31f788-2d41-4755-9564-2393f5d92149",
+    "name": "Login",
+    "url": "localhost:8000/auth/login",
+    "method": "POST",
+    "sortNum": 20000,
+    "created": "2022-08-03T18:48:46.774Z",
+    "modified": "2022-08-03T19:48:27.190Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"username\": \"rasta\",\n  \"password\": \"mypassword\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "7626df11-5d54-4878-8885-bd056f54829f",
+    "colId": "8146a879-4947-4b79-b063-79a8478df42d",
+    "containerId": "4e31f788-2d41-4755-9564-2393f5d92149",
+    "name": "Logout",
+    "url": "localhost:8000/auth/logout",
+    "method": "PUT",
+    "sortNum": 30000,
+    "created": "2022-08-03T18:49:15.468Z",
+    "modified": "2022-08-03T18:49:39.058Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "6a2c1472-46ce-4da1-8dc7-73d0c508d6f1",
+    "colId": "a3ea6a7c-9c06-483d-8c05-016f6af8dee2",
+    "containerId": "ae801f22-8fae-4f72-a3b2-0d9d56458337",
+    "name": "Register",
+    "url": "localhost:8000/auth/register",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2022-08-04T13:08:34.251Z",
+    "modified": "2022-08-04T13:37:45.129Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"username\": \"rasta6\",\n  \"password\": \"password\"\n}",
+      "form": []
+    },
+    "tests": []
+  }
+]

@@ -1,0 +1,31 @@
+[
+  {
+    "_id": "a3ea6a7c-9c06-483d-8c05-016f6af8dee2",
+    "colName": "VendingMachine",
+    "created": "2022-08-04T13:07:46.305Z",
+    "sortNum": 10000,
+    "folders": [
+      {
+        "_id": "ae801f22-8fae-4f72-a3b2-0d9d56458337",
+        "name": "Auth",
+        "containerId": "",
+        "created": "2022-08-04T13:08:03.668Z",
+        "sortNum": 20000
+      },
+      {
+        "_id": "a458f78f-2126-462e-b67d-d47e64494b77",
+        "name": "Users",
+        "containerId": "",
+        "created": "2022-08-04T13:08:18.108Z",
+        "sortNum": 30000
+      },
+      {
+        "_id": "d0d8cc55-1579-478c-b74a-53df10f609db",
+        "name": "Products",
+        "containerId": "",
+        "created": "2022-08-04T13:08:26.757Z",
+        "sortNum": 40000
+      }
+    ]
+  }
+]
