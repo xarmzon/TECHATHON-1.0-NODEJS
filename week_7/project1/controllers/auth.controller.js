@@ -1,7 +1,7 @@
 const { hashSync, compareSync } = require("bcryptjs");
 const { sign } = require("jsonwebtoken");
 const UserModel = require("../models/users.model");
-const { buildResponse } = require("../utils");
+const { buildResponse, buildUser } = require("../utils");
 const { APIError } = require("../utils/error");
 
 exports.register = async (req, res, next) => {
@@ -30,7 +30,7 @@ exports.register = async (req, res, next) => {
       role,
       password: hashPassword,
     });
-    const data = buildUser(newUser.toObject())
+    const data = buildUser(newUser.toObject());
     res
       .status(201)
       .json(buildResponse("Account Created Successfully", data, "account"));
@@ -77,15 +77,16 @@ exports.login = async (req, res, next) => {
   }
 };
 
+exports.logout = async (req, res, next) => {
+  try {
+  } catch (err) {
+    next(err);
+  }
+};
 
-exports.logout = async (req,res,next)=>{
-  try{
-
-  }catch(err){next(err)}
-}
-
-exports.refreshToken = async(req,res,next)=>{
-  try{
-
-  }catch(err){next(err)}
-}
+exports.refreshToken = async (req, res, next) => {
+  try {
+  } catch (err) {
+    next(err);
+  }
+};
