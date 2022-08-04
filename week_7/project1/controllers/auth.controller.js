@@ -15,7 +15,7 @@ exports.register = async (req, res, next) => {
         )
       );
     }
-    const oldAccount = UserModel.findOne({ username });
+    const oldAccount = await UserModel.findOne({ username });
     if (oldAccount) {
       return next(
         APIError.customError(
@@ -42,7 +42,9 @@ exports.login = async (req, res, next) => {
     const { username, password } = req.body;
     const user = await UserModel.findOne({ username });
     if (!user) {
-      return next(APIError.notFound("Sorry, No Account with that username"));
+      return next(
+        APIError.notFound("Sorry, No Account with that username or password")
+      );
     }
     if (!password) {
       return next(
@@ -57,8 +59,8 @@ exports.login = async (req, res, next) => {
     }
     const secret = process.env.JWT_SECRET_TOKEN;
     const payload = { id: user._id, role: user.role };
-    const token = sign(payload, secret, { expireIn: "1h" });
-    const refreshToken = sign(payload, secret, { expiredIn: "7d" });
+    const token = sign(payload, secret, { expiresIn: "1h" });
+    const refreshToken = sign(payload, secret, { expiresIn: "7d" });
     user.refreshToken = refreshToken;
     await user.save();
 

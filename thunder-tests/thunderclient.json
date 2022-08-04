@@ -60,12 +60,31 @@
     "method": "POST",
     "sortNum": 10000,
     "created": "2022-08-04T13:08:34.251Z",
-    "modified": "2022-08-04T13:37:45.129Z",
+    "modified": "2022-08-04T13:43:05.318Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"username\": \"rasta6\",\n  \"password\": \"password\"\n}",
+      "raw": "{\n  \"username\": \"rasta1\",\n  \"password\": \"password\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "f28f7e26-ef90-4e07-b34d-31d132abd80f",
+    "colId": "a3ea6a7c-9c06-483d-8c05-016f6af8dee2",
+    "containerId": "ae801f22-8fae-4f72-a3b2-0d9d56458337",
+    "name": "Login",
+    "url": "localhost:8000/auth/login",
+    "method": "POST",
+    "sortNum": 20000,
+    "created": "2022-08-04T13:43:30.237Z",
+    "modified": "2022-08-04T13:45:10.013Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"username\": \"rasta\",\n  \"password\": \"mypassword\"\n}",
       "form": []
     },
     "tests": []
