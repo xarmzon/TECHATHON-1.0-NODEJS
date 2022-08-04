@@ -1,11 +1,10 @@
-const {connect} = require("mongoose")
+const { connect } = require("mongoose");
 
-
-const startDB = async()=>{
-    await connect("mongodb://localhost:27017/VendingMachine")
-    console.log("Database Connected Successfully...")
-}
+const startDB = async () => {
+  await connect(process.env.DB_URI);
+  console.log("Database Connected Successfully...");
+};
 
 module.exports = {
-    startDB
-}
+  startDB,
+};

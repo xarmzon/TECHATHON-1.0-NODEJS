@@ -19,7 +19,7 @@ app.all("*", notFound);
 
 app.use(errorHandler);
 
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 const start = async () => {
   try {
