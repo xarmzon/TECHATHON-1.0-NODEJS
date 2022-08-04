@@ -30,10 +30,10 @@ exports.register = async (req, res, next) => {
       role,
       password: hashPassword,
     });
-
+    const data = buildUser(newUser.toObject())
     res
       .status(201)
-      .json(buildResponse("Account Created Successfully", newUser, "account"));
+      .json(buildResponse("Account Created Successfully", data, "account"));
   } catch (err) {
     next(err);
   }
@@ -61,17 +61,31 @@ exports.login = async (req, res, next) => {
     }
     const secret = process.env.JWT_SECRET_TOKEN;
     const payload = { id: user._id, role: user.role };
-    const token = sign(payload, secret, { expiresIn: "1h" });
+    const token = sign(payload, secret, { expiresIn: "1hr" });
     const refreshToken = sign(payload, secret, { expiresIn: "7d" });
     user.refreshToken = refreshToken;
     await user.save();
 
+    const data = buildUser(user.toObject());
     res
       .status(200)
       .json(
-        buildResponse("Account Logged-in successfully", user, "user", { token })
+        buildResponse("Account Logged-in successfully", data, "user", { token })
       );
   } catch (error) {
     next(error);
   }
 };
+
+
+exports.logout = async (req,res,next)=>{
+  try{
+
+  }catch(err){next(err)}
+}
+
+exports.refreshToken = async(req,res,next)=>{
+  try{
+
+  }catch(err){next(err)}
+}

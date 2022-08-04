@@ -5,3 +5,8 @@ exports.buildResponse = (msg, data, field = "data", others = {}) => {
     ...others,
   };
 };
+
+exports.buildUser = (userObject)=>{
+  const {password, __v,...data} = userObject
+  return data
+}
