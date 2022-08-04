@@ -60,12 +60,12 @@
     "method": "POST",
     "sortNum": 10000,
     "created": "2022-08-04T13:08:34.251Z",
-    "modified": "2022-08-04T13:43:05.318Z",
+    "modified": "2022-08-04T14:13:24.842Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"username\": \"rasta1\",\n  \"password\": \"password\"\n}",
+      "raw": "{\n  \"username\": \"rasta2\",\n  \"password\": \"password\"\n}",
       "form": []
     },
     "tests": []

@@ -7,14 +7,17 @@ class APIError extends Error {
   static notFound(msg) {
     return new this(msg || "Not found", 404);
   }
+
   static badRequest(msg = "Invalid Request", status = 400) {
     return new this(msg, status);
   }
+
   static unauthorized(msg, status = 401) {
     const message =
       msg || "You don't have the right permission to view this route";
     return new this(message, status);
   }
+
   static unauthenticated(msg, status = 401) {
     const message =
       msg || "You need to login first in order to have access to this route";
