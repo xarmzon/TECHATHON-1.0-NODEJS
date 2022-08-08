@@ -4,4 +4,3 @@ week_*/node_modules
 .env.development
 .env.production
 week_*/*/node_modules
-week_*/*/.env
