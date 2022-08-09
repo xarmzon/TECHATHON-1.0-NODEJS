@@ -38,4 +38,12 @@ exports.details = async (req, res, next) => {
   }
 };
 exports.update = async (req, res, next) => {};
+exports.resetDeposit = async (req, res, next) => {
+  try {
+    await UserModel.findByIdAndUpdate(req.userId, { default: 0 });
+    res.json(buildResponse("Your deposit has been reset successfully"));
+  } catch (err) {
+    next(err);
+  }
+};
 exports.delete_ = async (req, res, next) => {};
